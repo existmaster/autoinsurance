@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="btn-area">
-            <b-button class="btn-reg">취소</b-button>
+            <b-button class="btn-reg" @click="cancle">초기화</b-button>
             <b-button variant="primary" class="btn-reg" @click="join" >가입</b-button>
         </div>
     </div>
@@ -66,6 +66,16 @@ export default {
     methods: {
         customFormatter(date) {
             return moment(date).format('YYYY-MM-DD');
+        },
+        cancle() {
+            this.firstName = null;
+            this.lastName = null;
+            this.birthDate = null;
+            this.streetAddress = null;
+            this.aptUnitNumber = null;
+            this.city = null;
+            this.state = null;
+            this.zipcode = null;
         },
         join() {
             if (this.firstName == null) { alert('Please, check input first name'); return; }
