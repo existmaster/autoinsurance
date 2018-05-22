@@ -90,6 +90,7 @@ export default {
             })
             .then((result) => {
                 console.log('result : ', result);
+                alert('가입이 완료되었습니다!');
             })
             .catch((error) => {
                 console.log(error)
