@@ -128,16 +128,20 @@ export default {
         height: inherit;
     }
     .input-group {
-        margin: 10px 0 10px 0;
-        width: 80%;
+        margin: 8px 0 8px 0;
+        width: 100%;
     }
     .input-group-text {
         font-size: 13px;
+        color: #333333;
     }
     .vdp-datepicker {
         width: 80%;
     }
     .btn-reg {
         width: 120px;
+    }
+    .input-group-text {
+        width: 122px;
     }
 </style>
