@@ -11,11 +11,11 @@
                 </b-input-group>
                 <b-input-group prepend="Birth Date">
                     <datepicker :bootstrapStyling="true" :format="customFormatter" v-model="birthDate" />
-                    <b-input-group-append>
+                    <!-- <b-input-group-append>
                         <b-btn variant="info">
                             <icon name="calendar-alt"></icon>
                         </b-btn>
-                    </b-input-group-append>
+                    </b-input-group-append> -->
                 </b-input-group>
                 <b-input-group prepend="Street Address">
                     <b-form-input v-model="streetAddress" />
@@ -136,7 +136,7 @@ export default {
         color: #333333;
     }
     .vdp-datepicker {
-        width: 80%;
+        width: 84.8%;
     }
     .btn-reg {
         width: 120px;
