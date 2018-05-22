@@ -117,7 +117,7 @@ export default {
     }
     .content {
         width: 100%;
-        margin: 20px;
+        margin-top: 20px;
     }
     .input-area {
         position: relative;
