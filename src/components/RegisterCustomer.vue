@@ -34,6 +34,10 @@
                 </b-input-group>
             </div>
         </div>
+        <div class="btn-area">
+            <b-button class="btn-reg">취소</b-button>
+            <b-button variant="primary" class="btn-reg">가입</b-button>
+        </div>
     </div>
 </template>
 
@@ -81,5 +85,8 @@ export default {
     }
     .vdp-datepicker {
         width: 80%;
+    }
+    .btn-reg {
+        width: 120px;
     }
 </style>
