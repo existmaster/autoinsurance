@@ -87,7 +87,7 @@ export default {
             else if (this.state == null) { alert('Please, check input state'); return; }
             else if (this.zipcode == null) { alert('Please, check input zipcode'); return; }
 
-            axios.post('http://192.168.0.5:18080/policyholder',
+            axios.post('http://127.0.0.1:18080/customers',
             {
                 firstName: this.firstName,
                 lastName: this.lastName,
@@ -101,6 +101,10 @@ export default {
             .then((result) => {
                 console.log('result : ', result);
                 alert('가입이 완료되었습니다!');
+                this.$localStorage.set('customerId', result.data._links.customer.href);
+                this.$router.push({path : "/"});
+                //this.$router.push({path : "/index", query: {'yed': 'tee'}})
+
             })
             .catch((error) => {
                 console.log(error)

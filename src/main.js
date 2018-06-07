@@ -7,12 +7,14 @@ import axios from 'axios'
 import moment from 'moment'
 import App from './App'
 import router from './router'
+import VueLocalStorage from 'vue-localstorage'
 
 Vue.component('icon', VueAwesome)
 
 Vue.use(BootstrapVue);
 Vue.use(axios);
 Vue.use(moment);
+Vue.use(VueLocalStorage);
 
 Vue.config.productionTip = false
 
