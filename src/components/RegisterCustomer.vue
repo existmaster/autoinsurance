@@ -87,7 +87,7 @@ export default {
             else if (this.state == null) { alert('Please, check input state'); return; }
             else if (this.zipcode == null) { alert('Please, check input zipcode'); return; }
 
-            axios.post('http://127.0.0.1:18080/customers',
+            axios.post('http://127.0.0.1:18080/customer',
             {
                 firstName: this.firstName,
                 lastName: this.lastName,

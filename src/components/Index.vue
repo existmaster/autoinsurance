@@ -15,7 +15,7 @@ export default {
     name: 'index',
     methods: {
         nextPath() {
-            this.$router.push({ path: 'first' });
+            this.$router.push({ path: 'register-customer' });
         },
     },
 }
