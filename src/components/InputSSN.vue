@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="error-msg" v-if="errorFlag">
-      Bad Credit or unknown error
+      Bad Credit or Invalid DL
     </div>
     <div class="btn-area">
       <b-button class="btn-reg" @click="cancle">미동의</b-button>
@@ -46,15 +46,28 @@
           })
           .then((result) => {
             console.log('result : ', result);
-            alert('가입이 완료되었습니다!');
-            this.$router.push({path : "/"});
             //this.$router.push({path : "/index", query: {'yed': 'tee'}})
             this.errorFlag = false;
+            this.upgrade();
+
           })
           .catch((error) => {
             this.errorFlag = true;
             console.log(error)
           })
+      },
+      upgrade(){
+        axios.post('http://localhost:18080/policyholder', {
+          customer : this.$localStorage.get('customerId')
+        })
+          .then((result) => {
+            console.log('result : ', result);
+            this.$localStorage.set('policyholderId', result.data._links.self.href)
+            this.$router.push({path : "/input-vehicle"});
+          })
+          .catch((error) => {
+          console.log(error);
+        })
       }
     },
   }

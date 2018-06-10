@@ -4,6 +4,7 @@ import Layout from '@/components/Layout'
 import Index from '@/components/Index'
 import RegisterCustomer from '@/components/RegisterCustomer'
 import InputSSN from '@/components/InputSSN'
+import RegisterVehicle from '@/components/RegisterVehicle'
 
 Vue.use(Router)
 
@@ -25,7 +26,11 @@ export default new Router({
         {
           path: '/input-ssn',
           component: InputSSN,
-        }
+        },
+        {
+          path: '/input-vehicle',
+          component: RegisterVehicle,
+        },
       ]
     }
   ]

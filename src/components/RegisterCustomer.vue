@@ -102,7 +102,7 @@ export default {
                 console.log('result : ', result);
                 alert('가입이 완료되었습니다!');
                 this.$localStorage.set('customerId', result.data._links.customer.href);
-                this.$router.push({path : "/"});
+                this.$router.push({path : "/input-ssn"});
                 //this.$router.push({path : "/index", query: {'yed': 'tee'}})
 
             })
