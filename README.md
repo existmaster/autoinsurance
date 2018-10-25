@@ -1,4 +1,4 @@
-# insurance
+# insurance-UI Project
 
 ## Project setup
 ```
